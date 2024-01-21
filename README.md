@@ -33,7 +33,7 @@ En suivant ces étapes, de l'étude initiale des produits financiers à la mise 
 
 # Comment l'utiliser
 ### Première étape
-Vous devez installer [nodeJS](https://nodejs.org/en/download/current) et [git](https://github.com/git-guides/install-git)
+Vous devez installer [python3](https://www.python.org/downloads/) et [git](https://github.com/git-guides/install-git)
 
 ### Deuxième étape
 Vous devez cloner le git qui contien l'application
@@ -42,12 +42,12 @@ Vous devez cloner le git qui contien l'application
 ```
 
 ### Troisième étape
-Vous pouvez maintenant lancer l'application avec nodeJS
+Vous pouvez maintenant lancer l'application avec python3
 ```bash
-    node app.js
+    python3 {Application Name}
 ```
 
-# Functions
+# Applications
 ### Ajout fixe
 La fonction ajout fixe est faite pour calculer les interets par quinzaine d'un compte d'épargne.
 En se basant sur les informations de départ : 
