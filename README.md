@@ -56,9 +56,29 @@ En se basant sur les informations de départ :
 - L'interet, qui correspond à l'interet qui est ficer sur le compte en %
 
 > par exemple avec une somme de départ de 30 euros, la somme ajouter fixement est définit à 25 euros et l'interet sur ce compte est à 6%, nous optenons en sorti un tableau qui présente l'avancement des interets sur l'année mais aussi des totaux qui correspondent aux differents éléments du tableau.
-> Vous pouvez regarder la sortie dans la section "[sortie du programme](#sortie-du-programme)"
 
-# sortie du programme
+Le programme ajout_complexe.py est une implémentation en Python d'une fonction appelée ajout_complexe qui calcule les intérêts par quinzaine d'un compte d'épargne sur une période donnée, mais cette fois-ci avec une structure d'entrée plus complexe.
+
+### Ajout complexe
+La fonction prend deux arguments en entrée :
+- entree_complexe: un dictionnaire représentant les données d'entrée, où les clés sont les années et les valeurs sont des dictionnaires contenant les dépôts ou les retraits pour chaque quinzaine.
+- interet: le taux d'intérêt fixé sur le compte, en pourcentage.
+
+À l'intérieur de la fonction, des variables sont initialisées pour suivre les différents cumuls :
+- interet_cumule: total des intérêts cumulés.
+- ajout_cumule: total des sommes ajoutées cumulées.
+- total_cumule: total cumulé sur le compte (somme initiale + intérêts cumulés + sommes ajoutées cumulées).
+- calculated_initial: une copie de la somme initiale pour effectuer des calculs dessus sans la modifier.
+
+La fonction parcourt le dictionnaire entree_complexe en utilisant une double boucle imbriquée, pour chaque année (annee) et chaque quinzaine (quinzaine).
+À chaque itération, elle vérifie si un dépôt ou un retrait est spécifié pour cette quinzaine.
+- Si un dépôt est spécifié, la somme est ajoutée à calculated_ajout et ajout_cumule, puis les intérêts sont calculés et ajoutés à interet_cumule.
+- Si un retrait est spécifié, la somme est soustraite à calculated_ajout et ajout_cumule, puis les intérêts correspondants sont soustraits à interet_cumule.
+Après avoir parcouru toutes les années et toutes les quinzaines, le total cumulé est calculé en ajoutant les intérêts cumulés et les sommes ajoutées cumulées.
+
+Les résultats sont stockés dans un dictionnaire calcul_result contenant les clés "interet_cumule", "ajout_cumule", et "total_cumule". Ce dictionnaire est ensuite renvoyé comme résultat de la fonction.
+Enfin, la fonction est appelée avec un exemple de dictionnaire entree contenant des données d'entrée pour deux années, puis les résultats sont affichés avec print.
+Cela permet de gérer des scénarios plus complexes où les dépôts ou les retraits peuvent varier pour chaque quinzaine et pour chaque année. La sortie du programme fournira les totaux des intérêts cumulés, des sommes ajoutées cumulées et du total cumulé sur le compte pour les années spécifiées dans l'entrée complexe.
 
 # Author & Developer
 ### Author
