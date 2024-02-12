@@ -107,6 +107,33 @@ Après avoir parcouru toutes les années et toutes les quinzaines, la fonction i
 Enfin, la fonction ne renvoie rien, elle imprime simplement les détails des calculs.
 Cela permet d'avoir une vision détaillée de l'évolution des intérêts et des cumuls sur le compte d'épargne pour chaque quinzaine, mois par mois, sur la période spécifiée.
 
+### Sortie détaillée json
+La fonction sortie_detaille_json est une version légèrement modifiée de la fonction précédente sortie_detaille, qui génère et retourne un dictionnaire au format JSON contenant les détails des calculs d'intérêts et de cumuls sur un compte d'épargne, mois par mois et quinzaine par quinzaine, pour une période donnée.
+
+Voici une description détaillée du fonctionnement de cette fonction :
+La fonction prend quatre arguments en entrée :
+- initial: la somme de départ sur le compte au début de l'année.
+- ajout: la somme qui sera ajoutée au compte à chaque quinzaine.
+- interet: le taux d'intérêt fixé sur le compte, en pourcentage.
+- ans: le nombre d'années pour lesquelles les intérêts seront calculés.
+
+À l'intérieur de la fonction, des variables sont initialisées pour suivre les différents cumuls :
+- interet_cumule: total des intérêts cumulés.
+- ajout_cumule: total des sommes ajoutées cumulées.
+- total_cumule: total cumulé sur le compte (somme initiale + intérêts cumulés + sommes ajoutées cumulées).
+- calculated_initial: une copie de la somme initiale pour effectuer des calculs dessus sans la modifier.
+
+La fonction initialise un dictionnaire vide result pour stocker les détails des calculs.
+Elle utilise deux boucles imbriquées pour parcourir chaque année et chaque quinzaine dans cette année.
+
+À chaque itération, elle crée un dictionnaire pour stocker les détails de chaque quinzaine, y compris le mois, le montant ajouté, l'intérêt et les cumuls correspondants.
+Elle ajoute ce dictionnaire au dictionnaire de l'année en cours.
+Elle met également à jour les cumuls interet_cumule et ajout_cumule.
+
+Après avoir parcouru toutes les années et toutes les quinzaines, la fonction ajoute les totaux des intérêts cumulés, des sommes ajoutées cumulées et du total cumulé sur le compte au dictionnaire result.
+Enfin, la fonction retourne le dictionnaire result.
+Cela permet d'obtenir un format JSON contenant une représentation détaillée de l'évolution des intérêts et des cumuls sur le compte d'épargne pour chaque quinzaine, mois par mois, sur la période spécifiée.
+
 # Author & Developer
 ### Author
 - [@thorbeorndev](https://github.com/thorbeorndev)
