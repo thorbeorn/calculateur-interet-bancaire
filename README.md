@@ -80,6 +80,33 @@ Les résultats sont stockés dans un dictionnaire calcul_result contenant les cl
 Enfin, la fonction est appelée avec un exemple de dictionnaire entree contenant des données d'entrée pour deux années, puis les résultats sont affichés avec print.
 Cela permet de gérer des scénarios plus complexes où les dépôts ou les retraits peuvent varier pour chaque quinzaine et pour chaque année. La sortie du programme fournira les totaux des intérêts cumulés, des sommes ajoutées cumulées et du total cumulé sur le compte pour les années spécifiées dans l'entrée complexe.
 
+### Sortie détaillée
+La fonction sortie_detaille est une implémentation en Python qui affiche un détail des calculs d'intérêts et de cumuls sur un compte d'épargne, mois par mois et quinzaine par quinzaine, pour une période donnée.
+Voici une description détaillée du fonctionnement de cette fonction :
+
+La fonction prend quatre arguments en entrée :
+- initial: la somme de départ sur le compte au début de l'année.
+- ajout: la somme qui sera ajoutée au compte à chaque quinzaine.
+- interet: le taux d'intérêt fixé sur le compte, en pourcentage.
+- ans: le nombre d'années pour lesquelles les intérêts seront calculés.
+
+À l'intérieur de la fonction, des variables sont initialisées pour suivre les différents cumuls :
+- interet_cumule: total des intérêts cumulés.
+- ajout_cumule: total des sommes ajoutées cumulées.
+- total_cumule: total cumulé sur le compte (somme initiale + intérêts cumulés + sommes ajoutées cumulées).
+- calculated_initial: une copie de la somme initiale pour effectuer des calculs dessus sans la modifier.
+
+La fonction imprime un en-tête de tableau détaillant les informations affichées : année, mois, quinzaine, ajout, intérêt, ajout cumulé, et intérêt cumulé.
+La fonction utilise deux boucles imbriquées pour parcourir chaque année et chaque quinzaine dans cette année.
+
+À chaque itération, elle calcule le montant ajouté et les intérêts pour cette quinzaine en fonction des paramètres fournis.
+Elle ajoute ces valeurs aux cumuls correspondants (interet_cumule et ajout_cumule).
+Elle imprime les détails de chaque quinzaine dans le tableau.
+
+Après avoir parcouru toutes les années et toutes les quinzaines, la fonction imprime les totaux des intérêts cumulés, des sommes ajoutées cumulées et du total cumulé sur le compte.
+Enfin, la fonction ne renvoie rien, elle imprime simplement les détails des calculs.
+Cela permet d'avoir une vision détaillée de l'évolution des intérêts et des cumuls sur le compte d'épargne pour chaque quinzaine, mois par mois, sur la période spécifiée.
+
 # Author & Developer
 ### Author
 - [@thorbeorndev](https://github.com/thorbeorndev)
